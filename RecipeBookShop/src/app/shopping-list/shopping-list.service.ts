@@ -30,4 +30,14 @@ export class ShoppingListService {
         this.ingredientsChanged.next(this.ingredients.slice());
     }
 
+    updateIngredients(index: number, newIng: Ingredients){
+        this.ingredients[index] = newIng;
+        this.ingredientsChanged.next(this.ingredients.slice());
+    }
+
+    deleteIngredients(index: number){
+        this.ingredients.splice(index,1);
+        this.ingredientsChanged.next(this.ingredients.slice());
+    }
+
 }
