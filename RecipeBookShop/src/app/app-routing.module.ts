@@ -1,3 +1,4 @@
+import { AuthComponent } from './auth/auth.component';
 import { RecipeResolverService } from './recipes/recipe-resolver.service';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
             resolve: [RecipeResolverService]
         }
     ]},
-    {path:'shopping-list', component: ShoppingListComponent}
+    {path:'shopping-list', component: ShoppingListComponent},
+    {path:'auth', component: AuthComponent}
     
 ];
 
